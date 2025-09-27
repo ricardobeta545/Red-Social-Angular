@@ -41,7 +41,7 @@ export class Login {
       alert('Logueado correctamente');
       this.router.navigateByUrl('/dashboard');
     } else {
-      alert('Usuario o contraseña no cuentan con los parametros validos');
+      alert('Usuario o contraseña no cuentan con los parametros validos. Recuerde usar mayuscula, minuscula, número y caracter especial en la contraseña y solo letras en el usuario.');
     }
   }
 }
