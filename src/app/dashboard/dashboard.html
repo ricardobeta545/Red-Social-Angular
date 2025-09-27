@@ -1,0 +1,36 @@
+<div class="dashboard-body">
+  <div class="dashboard-header">
+    <h1>JURASSIC NETWORK</h1>
+    <button class="perfil-btn" (click)="IrPerfil()">Perfil </button>
+  </div>
+
+
+  <div class="filters">
+    <select [(ngModel)]="selectedCategory" (change)="filtrarPorCategoria()">
+        <option value="all">Todas</option>
+        <option value="Noticias">Noticias</option>
+        <option value="Foros">Foros</option>
+        <option value="Galerías">Galerías</option>
+        <option value="Casos de estudio">Casos de estudio</option>
+    </select>
+
+    <select [(ngModel)]="sortOrder" (change)="ordenarPublicaciones()">
+        <option value="recientes">Recientes</option>
+        <option value="populares">Populares</option>
+    </select>
+  </div>
+
+
+  <div class="timeline">
+        <div *ngFor="let post of publicacionesFiltradas" class="post-card" (click)="VerInfo(post.id)">
+        <h3>{{ post.titulo }}</h3>
+        <p>{{ post.descripcion | slice:0:120 }}...</p>
+        <div class="post-info">
+            <button (click)="darLike(post, $event)">👍 {{ post.likes }}</button>
+            <span>💬 {{ post.comentarios.length }}</span>
+            <span>{{ post.categoria }}</span>
+            <span>{{ post.fecha | date:'short' }}</span>
+      </div>
+    </div>
+  </div>
+</div>

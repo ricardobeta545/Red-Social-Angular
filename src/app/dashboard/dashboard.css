@@ -1,0 +1,110 @@
+
+
+
+.dashboard-body {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+
+}
+
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    background: rgba(255,255,255,0.2);
+    padding: 15px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #2e7d32; 
+}
+
+.perfil-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.perfil-btn:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+}
+
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.filters select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.post-card {
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+
+.post-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 13px;
+    color: #555;
+    flex-wrap: wrap;
+}
+
+.post-info button {
+    background: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.post-info button:hover {
+    background: #ffb300;
+    transform: scale(1.1);
+}

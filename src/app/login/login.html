@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="left-panel">
+<h1>Bienvenido a Jurassic Network</h1>
+<h2>Tu red social prehistorica</h2>
+<p>Conéctate con expertos, comparte conocimientos y descubre lo último sobre el mundo de las maravillosas criaturas de la prehistoria.</p>
+    <img src="img/logo1.png" alt="" class="dino-img">
+  </div>
+
+
+  <div class="right-panel">
+    <div class="login-box">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" name="username" [(ngModel)]="username" placeholder="Ingrese su usuario" required>
+      <div *ngIf="showUsername" class="error-msg">Campo username vacío</div>
+
+      <input type="password" name="password" [(ngModel)]="password" placeholder="Ingrese su contraseña" required>
+      <div *ngIf="showPassword" class="error-msg">Campo password vacío</div>
+
+      <button type="button" (click)="login()">Iniciar</button>
+    </div>
+  </div>
+</div>
