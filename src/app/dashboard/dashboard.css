@@ -1,6 +1,3 @@
-
-
-
 .dashboard-body {
     max-width: 1000px;
     margin: auto;
@@ -19,7 +16,7 @@ background: linear-gradient(135deg, #a8e6cf, #dcedc1);
     background: rgba(255,255,255,0.2);
     padding: 15px 20px;
     border-radius: 12px;
-    backdrop-filter: blur(5px);
+   
 }
 
 .dashboard-header h1 {

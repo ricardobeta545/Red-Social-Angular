@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  public readonly TIMEOUT = 10000; 
+  public readonly TIMEOUT = 60000; 
 
   constructor(public router: Router) {}
 

@@ -19,7 +19,7 @@ export class Perfil implements OnInit {
   ) {}
 
   ngOnInit() {
-    
+      this.authService.validateOnAction();
     this.username = this.authService.getUsername();
     console.log("Username en perfil:", this.username);
   }

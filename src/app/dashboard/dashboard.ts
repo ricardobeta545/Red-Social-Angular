@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 
 
@@ -95,16 +96,21 @@ export class Dashboard implements OnInit {
   selectedCategory = 'all';
   sortOrder = 'recientes';
 
-  constructor(private router: Router) { }
+  constructor(
+  public router: Router,
+  private authService: AuthService
+  ) {}
+  
 
   ngOnInit() {
-    
+    this.authService.validateOnAction();
     this.publicacionesFiltradas = [...this.publicaciones];
   }
 
   
   VerInfo(id: number) {
     this.router.navigate(['./publicacion/', id]);
+    
   }
 
   filtrarPorCategoria() {
